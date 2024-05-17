@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Trust - DockerLabs
-excerpt: "ataque de fuerza bruta"
+excerpt: "Maquina Linux vulnerada a travez de un ataque de fuerza bruta"
 date: 2024-05-17
 classes: wide
 header:
