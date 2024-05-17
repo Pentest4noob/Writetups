@@ -68,7 +68,7 @@ Nmap done: 1 IP address (1 host up) scanned in 8.77 seconds
 
 Procedo a investigar el puerto 80 en el navegador ingreso la siguiente URL `http://172.17.0.2` en el cual está la pagina de por default del servicio Apache
 
-![[000trust.png]](/assets/images/writetup-dockerlabs-trust/trust/000trust.png)
+![[trust000.png]](/assets/images/writetup-dockerlabs-trust/trust000.png)
 
 La pagina no tiene nada mas interesante, por lo tanto procedo a realizar fuzzing web a ver si me encuentro con algo mas
 
