@@ -68,7 +68,7 @@ Nmap done: 1 IP address (1 host up) scanned in 8.77 seconds
 
 Procedo a investigar el puerto 80 en el navegador ingreso la siguiente URL `http://172.17.0.2` en el cual está la pagina de por default del servicio Apache
 
-![](/assets/images/writetup-dockerlabs-trust/trust000.png)
+![trust000](/assets/images/writetup-dockerlabs-trust/trust000.png)
 
 La pagina no tiene nada mas interesante, por lo tanto procedo a realizar fuzzing web a ver si me encuentro con algo mas
 
@@ -114,7 +114,7 @@ Finished
 
 procedo a ver que hay en ese directorio ingresando la siguiente url en el navegador `http://172.17.0.2/secret.php`
 
-![](/assets/images/writetup-dockerlabs-trust/002trust.png)
+![secret.php](/assets/images/writetup-dockerlabs-trust/002trust.png)
 
 Me encuentro con el siguiente mensaje "Hola Mario, Esta web no se puede hackear." no me encuentro con nada mas en esta web, por lo tanto tengo un posible usuario llamado Mario, el cual voy a usar para hacer fuerza bruta al servicio SSH con la herramienta Hydra
 
