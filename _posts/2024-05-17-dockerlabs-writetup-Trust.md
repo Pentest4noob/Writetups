@@ -44,7 +44,7 @@ sudo nmap -p- --open -sS -sC -sV -n -Pn 172.17.0.2 -oN nmap.txt
 | -Pn       | Omitir el descubrimiento de hosts  |
 | -oN       | Formato de salida del archivo      |
 
-Finalizado el escaneo podemos ver que se encuentran 2 puertos abiertos 22 que corresponde al servicio de SSH y el puerto 80 al servicio web Apache
+Finalizado el escaneo podemos ver que se encuentran 2 puertos abiertos el 22 que corresponde al servicio de SSH y el puerto 80 correspondiente al servicio web Apache
 
 ```css
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-05-14 12:22 -03
@@ -66,7 +66,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 8.77 seconds
 ```
 
-Procedo a investigar el puerto 80 en el navegador ingreso la siguiente URL `http://172.17.0.2` en el cual está la pagina de por default del servicio Apache
+Procedo a investigar el puerto 80 en el navegador ingreso la siguiente URL `http://172.17.0.2` en el cual está la pagina por default del servicio Apache
 
 ![trust000](https://pentest4noob.github.io/Writetups/assets/images/writetup-dockerlabs-trust/trust000.png)
 
@@ -175,6 +175,6 @@ ejecutando el siguiente comando vamos a tener acceso a root
 sudo vim -c ':!/bin/sh'
 ```
 
-Listo! se logró escalar privilegios a al usuario root
+Listo! se logró escalar privilegios al usuario root
 
 ![](https://pentest4noob.github.io/Writetups/assets/images/writetup-dockerlabs-trust/005trust.png)
