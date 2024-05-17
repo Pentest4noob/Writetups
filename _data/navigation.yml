@@ -1,8 +1,6 @@
 main:
   - title: "Inicio"
     url: /
-  - title: "Artículos"
-    url: /artículos-año/
   - title: "Categorías"
     url: /categorías/
   - title: "Etiquetas"
