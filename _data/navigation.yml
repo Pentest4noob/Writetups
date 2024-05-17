@@ -1,0 +1,13 @@
+main:
+  - title: "Inicio"
+    url: /
+  - title: "Artículos"
+    url: /artículos-año/
+  - title: "Categorías"
+    url: /categorías/
+  - title: "Etiquetas"
+    url: /etiquetas/
+  - title: "Buscador"
+    url: /buscador/
+  - title: "Sobre mí"
+    url: /sobre-mí/
