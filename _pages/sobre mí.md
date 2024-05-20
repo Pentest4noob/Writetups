@@ -33,12 +33,5 @@ date: 2020-01-29
 
 ## ✨ Certificaciones y cursos
 
-- ![[Administración de Entornos Linux - IT-arg]](https://it-arg.com/certificado/EValera1117-8)
-- ![[Fundamentos de la Ciberseguridad - Coursera - Google]](https://www.coursera.org/account/accomplishments/verify/6XPSC4PLTUBJ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course)
-
-  🚗 Información adicional
-
----
-
-- Permiso B de conducir
-- Justice-Reaper.github.io - Web personal donde sube artículos sobre ciberseguridad ofensiva, writeups y herramientas
+- Administración de Entornos Linux - IT-arg
+- Fundamentos de la Ciberseguridad - Coursera
