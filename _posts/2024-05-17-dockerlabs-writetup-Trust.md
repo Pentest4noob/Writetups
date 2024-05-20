@@ -5,7 +5,7 @@ excerpt: "Maquina Linux vulnerada a travez de un ataque de fuerza bruta"
 date: 2024-05-17
 classes: wide
 header:
-  teaser: /assets/images/logos/logo_dockerlabs.png
+  teaser: https://pentest4noob.github.io/Writetups/assets/images/logos/logo_dockerlabs.png
   teaser_home_page: true
 categories:
   - DockerLabs
@@ -13,6 +13,7 @@ tags:
   - linux
   - Muy facil
   - Fuerza Buta
+  - Sudo
 ---
 
 <p align="center">
@@ -68,7 +69,7 @@ Nmap done: 1 IP address (1 host up) scanned in 8.77 seconds
 
 Procedo a investigar el puerto 80 en el navegador ingreso la siguiente URL `http://172.17.0.2` en el cual está la pagina por default del servicio Apache
 
-![trust000](https://pentest4noob.github.io/Writetups/assets/images/writetup-dockerlabs-trust/trust000.png)
+![trust000](https://pentest4noob.github.io/Writetups/assets/images/writetup/dockerlabs/trust/trust000.png)
 
 La pagina no tiene nada mas interesante, por lo tanto procedo a realizar fuzzing web a ver si me encuentro con algo mas
 
@@ -114,7 +115,7 @@ Finished
 
 procedo a ver que hay en ese directorio ingresando la siguiente url en el navegador `http://172.17.0.2/secret.php`
 
-![secret.php](https://pentest4noob.github.io/Writetups/assets/images/writetup-dockerlabs-trust/002trust.png)
+![secret.php](https://pentest4noob.github.io/Writetups/assets/images/writetup/dockerlabs/trust/002trust.png)
 
 Me encuentro con el siguiente mensaje "Hola Mario, Esta web no se puede hackear." no me encuentro con nada mas en esta web, por lo tanto tengo un posible usuario llamado Mario, el cual voy a usar para hacer fuerza bruta al servicio SSH con la herramienta Hydra
 
@@ -159,13 +160,13 @@ ssh mario@172.17.0.2
 
 al solicitar la contraseña ingreso `chocolate` y me permite el acceso a la maquina victima con el usuario mario intrusión realizada
 
-![](https://pentest4noob.github.io/Writetups/assets/images/writetup-dockerlabs-trust/003trust.png)
+![](https://pentest4noob.github.io/Writetups/assets/images/writetup/dockerlabs/trust/003trust.png)
 
 # 3- Escalada de privilegios
 
 Llego de momento de escalar privilegios y ser el usuario root, para ello voy a ejeutar el siguiente comando `sudo -l` para listar los permisos de sudo que tiene el usuario actual en el sistema.
 
-![](https://pentest4noob.github.io/Writetups/assets/images/writetup-dockerlabs-trust/004trust.png)
+![](https://pentest4noob.github.io/Writetups/assets/images/writetup/dockerlabs/trust/004trust.png)
 
 Se observa que se puede ejecutar el binario `/usr/bin/vim` como el usuario **root**. Por lo tanto se procede a investigar en la pagina [GTFOBins](https://gtfobins.github.io/) como explotar este binario
 
@@ -177,4 +178,4 @@ sudo vim -c ':!/bin/sh'
 
 Listo! se logró escalar privilegios al usuario root
 
-![](https://pentest4noob.github.io/Writetups/assets/images/writetup-dockerlabs-trust/005trust.png)
+![](https://pentest4noob.github.io/Writetups/assets/images/writetup/dockerlabs/trust/005trust.png)

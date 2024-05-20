@@ -59,7 +59,7 @@ Nmap done: 1 IP address (1 host up) scanned in 10.49 seconds
 
 Procedemos a investigar en el navegador colocando la siguiente url `http://172.17.0.2`
 
-![url](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/001Upload.png)
+![url](https://pentest4noob.github.io/Writetups/assets/images/writetup/dockerlabs/upload/001Upload.png)
 
 Se puede observar que es una pagina para subir archivos, por lo tanto se intuye que el vector de ataque podría ser mediante una reverse shell en php, procedo a crear el archivo malicioso con la herramienta msfvenom
 
