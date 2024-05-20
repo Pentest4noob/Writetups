@@ -7,7 +7,7 @@ date: 2020-01-29
 
 <p><br></p>
 <p align="center">
-  <img width="250" height="250" src="https://pentest4noob.github.io/Writetups/assets/images/perfil_foto.jpg">
+  <img width="250" height="250" src="https://pentest4noob.github.io/Writetups/assets/images/perfil_foto.jpg" style="border-radius: 50%;" >
 </p>
 
 ## 💬 Perfil
@@ -35,6 +35,7 @@ date: 2020-01-29
 
 - ![[Administración de Entornos Linux - IT-arg]](https://it-arg.com/certificado/EValera1117-8)
 - ![[Fundamentos de la Ciberseguridad - Coursera - Google]](https://www.coursera.org/account/accomplishments/verify/6XPSC4PLTUBJ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course)
+
   🚗 Información adicional
 
 ---
