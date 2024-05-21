@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Academy - TheHackersLabs
-excerpt: "Maquina Linux ideal para realizar tu primer CTF"
+excerpt: "Maquina Linux recomendada para vulnerar el entorno cms wordpress"
 date: 2024-05-21
 classes: wide
 header:
@@ -15,7 +15,7 @@ tags:
 ---
 
 <p align="center">
-  <img width="250" height="250" src="https://pentest4noob.github.io/Writetups/assets/images/writetup/thehackerslabs/Academy/academy.jpg">
+  <img width="250" height="250" src="https://pentest4noob.github.io/Writetups/assets/images/writetup/thehackerslabs/Academy/Academy.jpg">
 </p>
 
 Esta maquina está clasificada como "Principiante" en la plataforma de [Thehackerlabs](https://thehackerslabs.com/academy/), en este laboratorio vamos a ver técnicas como fuzzing web y una escalada de privilegios a través de tareas cron
