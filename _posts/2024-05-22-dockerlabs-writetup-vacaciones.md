@@ -5,17 +5,15 @@ excerpt: "Maquina Linux realizando intrusion por ataque de fuerza bruta al proto
 date: 2024-05-17
 classes: wide
 header:
-teaser: https://pentest4noob.github.io/Writetups/assets/images/logos/logo_dockerlabs.png
-teaser_home_page: true
+  teaser: https://pentest4noob.github.io/Writetups/assets/images/logos/logo_dockerlabs.png
+  teaser_home_page: true
 categories:
-
-- DockerLabs
-  tags:
-- linux
-- Muy facil
-- Fuerza Buta
-- Sudo
-
+  - DockerLabs
+tags:
+  - linux
+  - Muy facil
+  - Fuerza Buta
+  - Sudo
 ---
 
 <p align="center">
