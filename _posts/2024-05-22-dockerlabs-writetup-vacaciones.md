@@ -1,8 +1,8 @@
 ---
 layout: single
-title: Trust - DockerLabs
+title: Vacaciones - DockerLabs
 excerpt: "Maquina Linux realizando intrusion por ataque de fuerza bruta al protocolo SSH"
-date: 2024-05-17
+date: 2024-05-22
 classes: wide
 header:
   teaser: https://pentest4noob.github.io/Writetups/assets/images/logos/logo_dockerlabs.png
