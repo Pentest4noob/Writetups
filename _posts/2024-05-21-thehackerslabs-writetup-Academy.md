@@ -12,6 +12,7 @@ categories:
 tags:
   - linux
   - Principiante
+  - Wordpress
 ---
 
 <p align="center">

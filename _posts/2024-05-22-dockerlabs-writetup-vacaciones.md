@@ -17,7 +17,7 @@ tags:
 ---
 
 <p align="center">
-  <img width="250" height="250" src="https://pentest4noob.github.io/Writetups/assets/images/logos/logo_dockerlabs.png">
+  <img width="250" height="250" src="https://pentest4noob.github.io/Writetups/assets/images/writetup/dockerlabs/vacaciones/vacaciones.png">
 </p>
 
 Esta maquina está clasificada como "Muy Facil" en la plataforma de [DockerLabs](https://dockerlabs.es/#/), muy útil para practicar ataque de fuerza bruta y una escalada de privilegios sencilla
